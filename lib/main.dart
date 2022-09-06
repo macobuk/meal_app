@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/filters_screen.dart';
+import './screens/tabs_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/meal_detail_screen.dart';
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Raleway',
         primarySwatch: Colors.green,
-        secondaryHeaderColor: Colors.teal,
+        secondaryHeaderColor: Colors.amber,
         canvasColor: Colors.white,
         highlightColor: Colors.greenAccent.shade700,
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -32,9 +34,10 @@ class MyApp extends StatelessWidget {
       //home: CategoriesScreen(),
       initialRoute: '/',
       routes: {
-        '/': (ctx) => CategoriesScreen(),
+        '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       //onGenerateRoute: (settings) {
       //print(settings.arguments);
